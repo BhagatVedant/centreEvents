@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import logo from '../assets/logo.png'; // Update with your logo path
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import EventCard from "../components/eventCard"; // Assuming EventCard component is in this folder
+import logo from "../assets/logo.png"; // Update with your logo path
 
 const Home = () => {
   const [events, setEvents] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('ALL');
+  const [selectedCategory, setSelectedCategory] = useState("ALL");
 
   useEffect(() => {
     // Fetch events from the backend
-    axios.get('http://localhost:5000/api/events')
+    axios
+      .get("http://localhost:5000/api/events")
       .then((response) => {
         setEvents(response.data);
       })
@@ -21,10 +23,10 @@ const Home = () => {
     setSelectedCategory(category);
   };
 
-  const filteredEvents = events.filter(event => {
-    if (selectedCategory === 'ALL') return true;
-    if (selectedCategory === 'CLUB' && event.tags.includes('club')) return true;
-    if (selectedCategory === 'CONVOS' && event.tags.includes('convo')) return true;
+  const filteredEvents = events.filter((event) => {
+    if (selectedCategory === "ALL") return true;
+    if (selectedCategory === "CLUB" && event.tags.includes("club")) return true;
+    if (selectedCategory === "CONVOS" && event.tags.includes("convo")) return true;
     return false;
   });
 
@@ -42,27 +44,27 @@ const Home = () => {
         {/* Category Buttons */}
         <div className="flex justify-center space-x-6 mb-6">
           <button
-            onClick={() => handleCategoryChange('ALL')}
-            className={`py-2 px-6 rounded-full border-2 ${selectedCategory === 'ALL' ? 'border-saffron text-saffron' : 'border-transparent text-anti-flash_white'}`}
+            onClick={() => handleCategoryChange("ALL")}
+            className={`py-2 px-6 rounded-full border-2 ${selectedCategory === "ALL" ? "border-saffron text-saffron" : "border-transparent text-anti-flash_white"}`}
           >
             All
           </button>
           <button
-            onClick={() => handleCategoryChange('CLUB')}
-            className={`py-2 px-6 rounded-full border-2 ${selectedCategory === 'CLUB' ? 'border-saffron text-saffron' : 'border-transparent text-anti-flash_white'}`}
+            onClick={() => handleCategoryChange("CLUB")}
+            className={`py-2 px-6 rounded-full border-2 ${selectedCategory === "CLUB" ? "border-saffron text-saffron" : "border-transparent text-anti-flash_white"}`}
           >
             Club
           </button>
           <button
-            onClick={() => handleCategoryChange('CONVOS')}
-            className={`py-2 px-6 rounded-full border-2 ${selectedCategory === 'CONVOS' ? 'border-saffron text-saffron' : 'border-transparent text-anti-flash_white'}`}
+            onClick={() => handleCategoryChange("CONVOS")}
+            className={`py-2 px-6 rounded-full border-2 ${selectedCategory === "CONVOS" ? "border-saffron text-saffron" : "border-transparent text-anti-flash_white"}`}
           >
             Convos
           </button>
         </div>
 
         {/* Line Under Selected Button */}
-        <div className={`h-1 w-1/4 mx-auto ${selectedCategory === 'ALL' ? 'bg-saffron' : selectedCategory === 'CLUB' ? 'bg-saffron' : 'bg-saffron'}`} />
+        <div className={`h-1 w-1/4 mx-auto ${selectedCategory === "ALL" ? "bg-saffron" : selectedCategory === "CLUB" ? "bg-saffron" : "bg-saffron"}`} />
       </div>
 
       {/* Filtered Events Section */}
@@ -70,16 +72,7 @@ const Home = () => {
         {filteredEvents.length > 0 ? (
           <div>
             {filteredEvents.map((event) => (
-              <div key={event._id} className="bg-anti-flash_white p-6 rounded-lg shadow-md mb-6">
-                <h3 className="text-xl font-semibold text-night">{event.title}</h3>
-                <p>{event.date} | {event.time} | {event.venue}</p>
-                <p className="mt-4">{event.description}</p>
-                <div className="mt-4 flex space-x-2">
-                  {event.tags.map((tag, index) => (
-                    <span key={index} className="bg-oxford_blue text-anti-flash_white py-1 px-3 rounded-full text-sm">{tag}</span>
-                  ))}
-                </div>
-              </div>
+              <EventCard key={event.eventId} {...event} />
             ))}
           </div>
         ) : (

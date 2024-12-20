@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "email": "luffy@onepiece.com",
+      "password": "meat_mean123",
+      "name": "Monkey D. Luffy",
+      "profilePic": "/assets/luffy.jpg",
+      "clubs": [
+        "Pirates Club"
+      ]
+    },
+    {
+      "email": "sanji@onepiece.com",
+      "password": "nami_nami123",
+      "name": "Vinsmoke Sanji",
+      "profilePic": "/assets/sanji.jpg",
+      "clubs": [
+        "Cooking Club"
+      ]
+    },
+    {
+      "email": "nami@onepiece.com",
+      "password": "money_money123",
+      "name": "New User",
+      "profilePicture": "default.png",
+      "clubsFollowing": [],
+      "clubsPartOf": []
+    }
+  ],
+  "events": [
+    {
+      "eventId": 1,
+      "title": "Pirates Club Meeting",
+      "date": "2024-12-25",
+      "venue": "Grand Hall",
+      "description": "Join us for a fun-filled meeting!",
+      "tags": [
+        "Pirates",
+        "Adventure"
+      ],
+      "club": "Pirates Club"
+    },
+    {
+      "eventId": 2,
+      "title": "Cooking Class",
+      "date": "2024-12-26",
+      "venue": "Cooking Studio",
+      "description": "Learn how to cook like a pro!",
+      "tags": [
+        "Cooking",
+        "Food"
+      ],
+      "club": "Cooking Club"
+    }
+  ],
+  "clubs": [
+    {
+      "name": "Pirates Club",
+      "members": [
+        "luffy@onepiece.com"
+      ],
+      "description": "A club for pirates."
+    },
+    {
+      "name": "Cooking Club",
+      "members": [
+        "sanji@onepiece.com"
+      ],
+      "description": "A club for cooking enthusiasts."
+    }
+  ]
+}
