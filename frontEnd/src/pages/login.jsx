@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
 
-  const toggleLoginSignUp = () => {
-    setIsLogin(!isLogin);
+  const switchToLogin = () => {
+    setIsLogin(true);
+  };
+
+  const switchToSignUp = () => {
+    setIsLogin(false);
   };
 
   return (
@@ -14,20 +18,20 @@ const Login = () => {
         {/* Login/Sign Up Toggle */}
         <div className="flex space-x-6 mb-6 justify-center">
           <button
-            onClick={toggleLoginSignUp}
+            onClick={switchToLogin}
             className={`px-6 py-2 text-lg font-semibold ${isLogin ? 'text-saffron' : 'text-night'} border-b-4 ${
               isLogin ? 'border-saffron' : 'border-night'
             } transition-all duration-300 w-full text-center`}
           >
-            {isLogin ? 'Login' : 'Sign Up'}
+            Login
           </button>
           <button
-            onClick={toggleLoginSignUp}
+            onClick={switchToSignUp}
             className={`px-6 py-2 text-lg font-semibold ${!isLogin ? 'text-saffron' : 'text-night'} border-b-4 ${
               !isLogin ? 'border-saffron' : 'border-night'
             } transition-all duration-300 w-full text-center`}
           >
-            {isLogin ? 'Sign Up' : 'Login'}
+            Sign Up
           </button>
         </div>
 
