@@ -32,6 +32,7 @@
       "eventId": 1,
       "title": "Pirates Club Meeting",
       "date": "2024-12-25",
+      "time": "7PM",
       "venue": "Grand Hall",
       "description": "Join us for a fun-filled meeting!",
       "tags": [
@@ -44,6 +45,7 @@
       "eventId": 2,
       "title": "Cooking Class",
       "date": "2024-12-26",
+      "time": "8:30 PM",
       "venue": "Cooking Studio",
       "description": "Learn how to cook like a pro!",
       "tags": [
