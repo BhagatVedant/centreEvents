@@ -54,6 +54,286 @@
         "Food"
       ],
       "club": "Cooking Club"
+    },
+    {
+      "eventId": 3,
+      "type": "club",
+      "title": "Astronomy Night",
+      "date": "2025-01-05",
+      "time": "9PM",
+      "venue": "Observatory",
+      "description": "Explore the night sky with fellow enthusiasts.",
+      "tags": [
+        "Astronomy",
+        "Science"
+      ],
+      "club": "Astronomy Club"
+    },
+    {
+      "eventId": 4,
+      "type": "club",
+      "title": "Book Club Meeting",
+      "date": "2025-01-10",
+      "time": "6PM",
+      "venue": "Library",
+      "description": "Discuss the latest book we've read.",
+      "tags": [
+        "Books",
+        "Discussion"
+      ],
+      "club": "Book Club"
+    },
+    {
+      "eventId": 5,
+      "type": "club",
+      "title": "Chess Tournament",
+      "date": "2025-02-01",
+      "time": "4PM",
+      "venue": "Main Hall",
+      "description": "Compete in our annual chess tournament.",
+      "tags": [
+        "Chess",
+        "Competition"
+      ],
+      "club": "Chess Club"
+    },
+    {
+      "eventId": 6,
+      "type": "club",
+      "title": "Art Exhibition",
+      "date": "2025-02-15",
+      "time": "5PM",
+      "venue": "Art Gallery",
+      "description": "Showcase your artistic talents.",
+      "tags": [
+        "Art",
+        "Exhibition"
+      ],
+      "club": "Art Club"
+    },
+    {
+      "eventId": 7,
+      "type": "club",
+      "title": "Tech Talk",
+      "date": "2025-03-05",
+      "time": "7PM",
+      "venue": "Tech Hub",
+      "description": "Discuss the latest trends in technology.",
+      "tags": [
+        "Technology",
+        "Discussion"
+      ],
+      "club": "Tech Club"
+    },
+    {
+      "eventId": 8,
+      "type": "club",
+      "title": "Photography Walk",
+      "date": "2025-03-20",
+      "time": "10AM",
+      "venue": "City Park",
+      "description": "Capture the beauty of nature.",
+      "tags": [
+        "Photography",
+        "Nature"
+      ],
+      "club": "Photography Club"
+    },
+    {
+      "eventId": 9,
+      "type": "club",
+      "title": "Fitness Bootcamp",
+      "date": "2025-04-01",
+      "time": "6AM",
+      "venue": "Gym",
+      "description": "Join us for an intense fitness session.",
+      "tags": [
+        "Fitness",
+        "Health"
+      ],
+      "club": "Fitness Club"
+    },
+    {
+      "eventId": 10,
+      "type": "club",
+      "title": "Music Jam Session",
+      "date": "2025-04-15",
+      "time": "8PM",
+      "venue": "Music Room",
+      "description": "Bring your instruments and jam with us.",
+      "tags": [
+        "Music",
+        "Jam"
+      ],
+      "club": "Music Club"
+    },
+    {
+      "eventId": 11,
+      "type": "club",
+      "title": "Drama Rehearsal",
+      "date": "2025-05-01",
+      "time": "3PM",
+      "venue": "Auditorium",
+      "description": "Practice for our upcoming play.",
+      "tags": [
+        "Drama",
+        "Rehearsal"
+      ],
+      "club": "Drama Club"
+    },
+    {
+      "eventId": 12,
+      "type": "club",
+      "title": "Gardening Workshop",
+      "date": "2025-05-20",
+      "time": "2PM",
+      "venue": "Community Garden",
+      "description": "Learn the basics of gardening.",
+      "tags": [
+        "Gardening",
+        "Workshop"
+      ],
+      "club": "Gardening Club"
+    },
+    {
+      "eventId": 13,
+      "type": "club",
+      "title": "Language Exchange",
+      "date": "2025-06-01",
+      "time": "4PM",
+      "venue": "Language Lab",
+      "description": "Practice languages with native speakers.",
+      "tags": [
+        "Language",
+        "Exchange"
+      ],
+      "club": "Language Club"
+    },
+    {
+      "eventId": 14,
+      "type": "club",
+      "title": "Science Fair",
+      "date": "2025-06-15",
+      "time": "9AM",
+      "venue": "Science Center",
+      "description": "Show off your science projects.",
+      "tags": [
+        "Science",
+        "Fair"
+      ],
+      "club": "Science Club"
+    },
+    {
+      "eventId": 15,
+      "type": "club",
+      "title": "Robotics Workshop",
+      "date": "2025-07-01",
+      "time": "11AM",
+      "venue": "Robotics Lab",
+      "description": "Build and program robots.",
+      "tags": [
+        "Robotics",
+        "Workshop"
+      ],
+      "club": "Robotics Club"
+    },
+    {
+      "eventId": 16,
+      "type": "club",
+      "title": "Dance Practice",
+      "date": "2025-07-10",
+      "time": "7PM",
+      "venue": "Dance Studio",
+      "description": "Practice for our upcoming dance show.",
+      "tags": [
+        "Dance",
+        "Practice"
+      ],
+      "club": "Dance Club"
+    },
+    {
+      "eventId": 17,
+      "type": "club",
+      "title": "Coding Hackathon",
+      "date": "2025-08-01",
+      "time": "8AM",
+      "venue": "Tech Hub",
+      "description": "Compete in a coding challenge.",
+      "tags": [
+        "Coding",
+        "Hackathon"
+      ],
+      "club": "Coding Club"
+    },
+    {
+      "eventId": 18,
+      "type": "club",
+      "title": "Yoga Class",
+      "date": "2025-08-15",
+      "time": "6PM",
+      "venue": "Yoga Room",
+      "description": "Relax and stretch with us.",
+      "tags": [
+        "Yoga",
+        "Health"
+      ],
+      "club": "Yoga Club"
+    },
+    {
+      "eventId": 19,
+      "type": "club",
+      "title": "Environmental Cleanup",
+      "date": "2025-09-01",
+      "time": "9AM",
+      "venue": "Beach",
+      "description": "Help clean up our local beach.",
+      "tags": [
+        "Environment",
+        "Cleanup"
+      ],
+      "club": "Environment Club"
+    },
+    {
+      "eventId": 20,
+      "type": "club",
+      "title": "Meditation Session",
+      "date": "2025-09-15",
+      "time": "5PM",
+      "venue": "Meditation Room",
+      "description": "Join us for a guided meditation.",
+      "tags": [
+        "Meditation",
+        "Relaxation"
+      ],
+      "club": "Meditation Club"
+    },
+    {
+      "eventId": 21,
+      "type": "club",
+      "title": "Film Screening",
+      "date": "2025-10-01",
+      "time": "7PM",
+      "venue": "Cinema",
+      "description": "Watch a classic film with us.",
+      "tags": [
+        "Film",
+        "Screening"
+      ],
+      "club": "Film Club"
+    },
+    {
+      "eventId": 22,
+      "type": "club",
+      "title": "Board Game Night",
+      "date": "2025-10-15",
+      "time": "8PM",
+      "venue": "Game Room",
+      "description": "Play board games with friends.",
+      "tags": [
+        "Board Games",
+        "Fun"
+      ],
+      "club": "Board Games Club"
     }
   ],
   "clubs": [
@@ -70,6 +350,106 @@
         "sanji@onepiece.com"
       ],
       "description": "A club for cooking enthusiasts."
+    },
+    {
+      "name": "Astronomy Club",
+      "members": [],
+      "description": "Explore the wonders of the universe."
+    },
+    {
+      "name": "Book Club",
+      "members": [],
+      "description": "For book lovers and avid readers."
+    },
+    {
+      "name": "Chess Club",
+      "members": [],
+      "description": "For chess enthusiasts of all levels."
+    },
+    {
+      "name": "Art Club",
+      "members": [],
+      "description": "Express your creativity through art."
+    },
+    {
+      "name": "Tech Club",
+      "members": [],
+      "description": "Discuss and explore technology."
+    },
+    {
+      "name": "Photography Club",
+      "members": [],
+      "description": "Capture moments through the lens."
+    },
+    {
+      "name": "Fitness Club",
+      "members": [],
+      "description": "Promote health and fitness."
+    },
+    {
+      "name": "Music Club",
+      "members": [],
+      "description": "For those who love making music."
+    },
+    {
+      "name": "Drama Club",
+      "members": [],
+      "description": "Performing arts and theater."
+    },
+    {
+      "name": "Gardening Club",
+      "members": [],
+      "description": "Cultivate your gardening skills."
+    },
+    {
+      "name": "Language Club",
+      "members": [],
+      "description": "Practice and learn new languages."
+    },
+    {
+      "name": "Science Club",
+      "members": [],
+      "description": "Explore scientific concepts and projects."
+    },
+    {
+      "name": "Robotics Club",
+      "members": [],
+      "description": "Build and program robots."
+    },
+    {
+      "name": "Dance Club",
+      "members": [],
+      "description": "For those who love dancing."
+    },
+    {
+      "name": "Coding Club",
+      "members": [],
+      "description": "For coding enthusiasts."
+    },
+    {
+      "name": "Yoga Club",
+      "members": [],
+      "description": "Relax and stretch with yoga."
+    },
+    {
+      "name": "Environment Club",
+      "members": [],
+      "description": "Promote environmental awareness."
+    },
+    {
+      "name": "Meditation Club",
+      "members": [],
+      "description": "For mindfulness and relaxation."
+    },
+    {
+      "name": "Film Club",
+      "members": [],
+      "description": "Watch and discuss films."
+    },
+    {
+      "name": "Board Games Club",
+      "members": [],
+      "description": "Enjoy board games with friends."
     }
   ]
 }

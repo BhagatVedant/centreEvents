@@ -4,6 +4,26 @@ import EventCard from "../components/EventCard";
 import logo from "../assets/logo.png";
 import cookingClassImage from "../assets/cookingClass.jpeg";
 import pirateClubImage from "../assets/pirateClub.jpeg";
+import environmentalImage from "../assets/environmental.jpeg";
+import boardgameImage from "../assets/boardgame.jpeg";
+import filmImage from "../assets/film.jpeg";
+import meditationImage from "../assets/meditation.jpeg";
+import yogaImage from "../assets/yoga.jpeg";
+import codingImage from "../assets/coding.jpeg";
+import danceImage from "../assets/dance.jpeg";
+import robotImage from "../assets/robot.jpeg";
+import scienceImage from "../assets/science.jpeg";
+import languageImage from "../assets/language.jpeg";
+import gardeningImage from "../assets/gardening.jpeg";
+import dramaImage from "../assets/drama.jpeg";
+import musicImage from "../assets/music.jpeg";
+import fitnessImage from "../assets/fitness.jpeg";
+import photographyImage from "../assets/photography.jpeg";
+import techImage from "../assets/tech.jpeg";
+import artImage from "../assets/art.jpeg";
+import chessImage from "../assets/chess.jpeg";
+import bookImage from "../assets/book.jpeg";
+import astronomyImage from "../assets/astronomy.jpeg";
 
 const Home = () => {
   const [events, setEvents] = useState([]);
@@ -38,6 +58,46 @@ const Home = () => {
         return pirateClubImage;
       case "Cooking Class":
         return cookingClassImage;
+      case "Astronomy Night":
+        return astronomyImage;
+      case "Book Club Meeting":
+        return bookImage;
+      case "Chess Tournament":
+        return chessImage;
+      case "Art Exhibition":
+        return artImage;
+      case "Tech Talk":
+        return techImage;
+      case "Photography Walk":
+        return photographyImage;
+      case "Fitness Bootcamp":
+        return fitnessImage;
+      case "Music Jam Session":
+        return musicImage;
+      case "Drama Rehearsal":
+        return dramaImage;
+      case "Gardening Workshop":
+        return gardeningImage;
+      case "Language Exchange":
+        return languageImage;
+      case "Science Fair":
+        return scienceImage;
+      case "Robotics Workshop":
+        return robotImage;
+      case "Dance Practice":
+        return danceImage;
+      case "Coding Hackathon":
+        return codingImage;
+      case "Yoga Class":
+        return yogaImage;
+      case "Environmental Cleanup":
+        return environmentalImage;
+      case "Meditation Session":
+        return meditationImage;
+      case "Film Screening":
+        return filmImage;
+      case "Board Game Night":
+        return boardgameImage;
       default:
         return "";
     }
