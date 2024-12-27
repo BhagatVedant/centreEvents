@@ -1,26 +1,58 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Background */
+.bg-oxford_blue {
+  background-color: #031d44;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
-  
-  .min-h-screen {
-    min-height: 100vh;
+  to {
+    opacity: 1;
   }
-  
-  .bg-oxford_blue {
-    background-color: #011f4b;
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
   }
-  
-  .text-anti-flash_white {
-    color: #f2f2f2;
+  to {
+    opacity: 1;
   }
-  
-  .bg-saffron {
-    background-color: #f4c542;
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .bg-saffron-600:hover {
-    background-color: #d9b038;
+  100% {
+    transform: rotate(360deg);
   }
-  
+}
+
+.animate-fade-in {
+  animation: fade-in 1.5s ease-in-out;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 1.5s ease-in-out;
+}
+
+
+/* Colors */
+.text-anti-flash_white {
+  color: #f8f8f8;
+}
+
+.bg-saffron {
+  background-color: #f4c542;
+}
+
+.text-night {
+  color: #031d44;
+}

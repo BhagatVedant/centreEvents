@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import "../styles/about.css"; // Optional: Add custom styles for fine-tuning
+import vedantImg from "../assets/vedantBody.png";
+import robertImg from "../assets/robertBody.png";
+import "../styles/about.css";
 
 const About = () => {
-  // State to track which silhouette is selected
   const [selected, setSelected] = useState(null);
 
-  // Data for founders
   const founders = {
     vedant: {
       name: "Vedant Bhagat",
       desc: "Placeholder description for Vedant. Add more details here.",
+      image: vedantImg,
       links: [
         { name: "GitHub", url: "https://github.com/your-username" },
         { name: "LinkedIn", url: "https://linkedin.com/in/your-username" },
@@ -18,6 +19,7 @@ const About = () => {
     robert: {
       name: "Robert Nguyen",
       desc: "Placeholder description for Robert. Add more details here.",
+      image: robertImg,
       links: [
         { name: "GitHub", url: "https://github.com/another-username" },
         { name: "LinkedIn", url: "https://linkedin.com/in/another-username" },
@@ -25,76 +27,87 @@ const About = () => {
     },
   };
 
-  // Reset to "CentreEvents" view
   const handleOutsideClick = () => setSelected(null);
 
   return (
-    <div className="relative min-h-screen bg-oxford_blue flex items-center justify-center text-anti-flash_white">
-      {/* Transparency Overlay */}
+    <div className="relative min-h-screen bg-oxford_blue overflow-hidden text-anti-flash_white">
+      {/* Close Button */}
       {selected && (
-        <div
-          className="absolute inset-0 bg-black bg-opacity-50 z-10"
+        <button
           onClick={handleOutsideClick}
-        ></div>
+          className="absolute top-4 right-4 z-20 text-4xl font-bold hover:scale-110 transition-transform duration-300"
+        >
+          ✕
+        </button>
       )}
 
       {/* Main Content */}
       <div
-        className={`z-20 relative p-10 rounded-lg ${
-          selected ? "bg-transparent" : "bg-oxford_blue shadow-lg"
+        className={`relative flex flex-col items-center w-full p-10 ${
+          selected ? "hidden" : ""
         }`}
       >
-        {/* Default View */}
-        {!selected && (
-          <>
-            <h1 className="text-4xl font-bold text-center mb-6">CentreEvents</h1>
-            <p className="text-center text-lg mb-12">
-              CentreEvents is your one-stop platform for discovering events and engaging with clubs at our
-              college. Stay up to date with everything happening across campus!
-            </p>
+        <h1 className="text-5xl font-bold text-center mb-6 animate-fade-in">
+          CentreEvents
+        </h1>
+        <div className="w-24 h-1 bg-black mx-auto mb-6"></div>
+        <p className="text-center text-lg mb-12 max-w-2xl animate-fade-in">
+          CentreEvents is your one-stop platform for discovering events and
+          engaging with clubs at our college. Stay up to date with everything
+          happening across campus!
+        </p>
 
-            <div className="flex justify-between items-center">
-              {/* Vedant's Silhouette */}
-              <div
-                className="cursor-pointer flex flex-col items-center"
-                onClick={() => setSelected("vedant")}
-              >
-                <div className="bg-saffron rounded-full w-28 h-28 flex items-center justify-center">
-                  <img
-                    src="https://avatars.githubusercontent.com/u/70897139?v=4"
-                    alt="Vedant Bhagat"
-                    className="rounded-full"
-                  />
-                </div>
-                <h3 className="mt-2 font-bold">Vedant</h3>
-              </div>
+        <div className="relative w-full h-[60vh] flex justify-around items-end">
+          {/* Background Lines/Swirls */}
+          <div className="absolute top-0 left-20 w-64 h-64 bg-transparent rounded-full border-4 border-dashed border-saffron animate-spin-slow"></div>
+          <div className="absolute bottom-0 right-20 w-64 h-64 bg-transparent rounded-full border-4 border-dashed border-saffron animate-spin-slow"></div>
 
-              {/* Robert's Silhouette */}
-              <div
-                className="cursor-pointer flex flex-col items-center"
-                onClick={() => setSelected("robert")}
-              >
-                <div className="bg-saffron rounded-full w-28 h-28 flex items-center justify-center">
-                  <img
-                    src="https://avatars.githubusercontent.com/u/150546895?v=4"
-                    alt="Robert Nguyen"
-                    className="rounded-full"
-                  />
-                </div>
-                <h3 className="mt-2 font-bold">Robert</h3>
-              </div>
-            </div>
-          </>
-        )}
+          {/* Vedant */}
+          <div
+            className="cursor-pointer flex flex-col items-center transform hover:scale-110 transition duration-300"
+            onClick={() => setSelected("vedant")}
+          >
+            <img
+              src={vedantImg}
+              alt="Vedant"
+              className="rounded-full w-40 h-40 object-cover border-4 border-saffron"
+            />
+            <h3 className="mt-4 font-bold text-xl">Vedant</h3>
+          </div>
 
-        {/* Selected View */}
-        {selected && (
-          <div className="text-center">
+          {/* Robert */}
+          <div
+            className="cursor-pointer flex flex-col items-center transform hover:scale-110 transition duration-300"
+            onClick={() => setSelected("robert")}
+          >
+            <img
+              src={robertImg}
+              alt="Robert"
+              className="rounded-full w-40 h-40 object-cover border-4 border-saffron"
+            />
+            <h3 className="mt-4 font-bold text-xl">Robert</h3>
+          </div>
+        </div>
+      </div>
+
+      {/* Selected Profile View */}
+      {selected && (
+        <div className="flex flex-col md:flex-row items-center text-center md:text-left p-10">
+          {/* Profile Image */}
+          <div className="w-full md:w-1/2 p-4 animate-slide-in-left">
+            <img
+              src={founders[selected].image}
+              alt={founders[selected].name}
+              className="rounded-lg shadow-lg max-w-full h-auto"
+            />
+          </div>
+
+          {/* Info Section */}
+          <div className="w-full md:w-1/2 p-6 animate-slide-in-right">
             <h1 className="text-4xl font-bold mb-4">{founders[selected].name}</h1>
+            <div className="w-16 h-1 bg-saffron mx-auto md:mx-0 mb-4"></div>
             <p className="text-lg mb-6">{founders[selected].desc}</p>
-
-            {/* Links */}
-            <div className="flex justify-center space-x-6">
+            <div className="flex justify-center md:justify-start space-x-4">
               {founders[selected].links.map((link, idx) => (
                 <a
                   key={idx}
@@ -108,8 +121,8 @@ const About = () => {
               ))}
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
