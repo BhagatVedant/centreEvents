@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import EventCard from "../components/EventCard";
+import EventCard from "../components/eventCard";
 import logo from "../assets/logo.png";
 
 const Home = () => {
