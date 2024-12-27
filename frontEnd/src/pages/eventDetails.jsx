@@ -1,25 +1,26 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import "../styles/style.css"; // Make sure to import your CSS file
 
-const EventDetails = () => {
-  const { eventId } = useParams();
-  // Fetch event details based on eventId or use mock data
-
+const EventCard = ({ title, description, date, time, venue, tags }) => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold">Event Title</h1>
-      <ul className="text-lg text-gray-600 my-4">
-        <li><strong>Date:</strong> 12th Dec 2024</li>
-        <li><strong>Time:</strong> 5:00 PM</li>
-        <li><strong>Venue:</strong> Auditorium</li>
-      </ul>
-      <p className="my-4">A brief description of the event. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula venenatis justo, nec varius eros hendrerit eget.</p>
-      <div className="flex gap-2 mt-4">
-        <span className="text-xs bg-zaffre-500 text-white py-1 px-2 rounded-full">Tag 1</span>
-        <span className="text-xs bg-zaffre-500 text-white py-1 px-2 rounded-full">Tag 2</span>
+    <div className="bg-white rounded-lg shadow-lg p-6 mb-6 w-full md:w-1/2 lg:w-1/3 mx-auto transform transition-transform duration-500 hover:scale-110 hover:shadow-2xl">
+      <h3 className="text-2xl font-bold mb-2">{title}</h3>
+      <p className="text-gray-700 mb-2"><strong>Date:</strong> {date}</p>
+      <p className="text-gray-700 mb-2"><strong>Time:</strong> {time}</p>
+      <p className="text-gray-700 mb-2"><strong>Venue:</strong> {venue}</p>
+      <p className="text-gray-700 mb-4">{description}</p>
+      <div className="flex flex-wrap gap-2">
+        {tags.map((tag, index) => (
+          <span
+            key={index}
+            className="bg-saffron text-white text-sm font-semibold px-3 py-1 rounded-full"
+          >
+            {tag}
+          </span>
+        ))}
       </div>
     </div>
   );
 };
 
-export default EventDetails;
+export default EventCard;

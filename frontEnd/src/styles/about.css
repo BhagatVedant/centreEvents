@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  
+  .bg-oxford_blue {
+    background-color: #011f4b;
+  }
+  
+  .text-anti-flash_white {
+    color: #f2f2f2;
+  }
+  
+  .bg-saffron {
+    background-color: #f4c542;
+  }
+  
+  .bg-saffron-600:hover {
+    background-color: #d9b038;
+  }
+  
