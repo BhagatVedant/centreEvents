@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import EventCard from "../components/eventCard"; // Assuming EventCard component is in this folder
-import logo from "../assets/logo.png"; // Update with your logo path
+import EventCard from "../components/EventCard";
+import logo from "../assets/logo.png";
 
 const Home = () => {
   const [events, setEvents] = useState([]);
@@ -25,8 +25,8 @@ const Home = () => {
 
   const filteredEvents = events.filter((event) => {
     if (selectedCategory === "ALL") return true;
-    if (selectedCategory === "CLUB" && event.tags.includes("club")) return true;
-    if (selectedCategory === "CONVOS" && event.tags.includes("convo")) return true;
+    if (selectedCategory === "CLUB" && event.type === "club") return true;
+    if (selectedCategory === "CONVOS" && event.type === "convocation") return true;
     return false;
   });
 

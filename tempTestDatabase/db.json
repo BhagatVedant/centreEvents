@@ -21,15 +21,15 @@
     {
       "email": "nami@onepiece.com",
       "password": "money_money123",
-      "name": "New User",
-      "profilePicture": "default.png",
-      "clubsFollowing": [],
-      "clubsPartOf": []
+      "name": "Nami",
+      "profilePic": "default.png",
+      "clubs": []
     }
   ],
   "events": [
     {
       "eventId": 1,
+      "type": "club",
       "title": "Pirates Club Meeting",
       "date": "2024-12-25",
       "time": "7PM",
@@ -43,6 +43,7 @@
     },
     {
       "eventId": 2,
+      "type": "club",
       "title": "Cooking Class",
       "date": "2024-12-26",
       "time": "8:30 PM",
