@@ -34,7 +34,11 @@ const Home = () => {
     <div className="min-h-screen bg-oxford_blue">
       {/* Logo Section */}
       <div className="flex justify-center items-center h-screen bg-saffron">
-        <img src={logo} alt="CentreEvents Logo" className="max-w-full max-h-[40vh] object-contain" />
+        <img
+          src={logo}
+          alt="CentreEvents Logo"
+          className="max-w-full max-h-[80vh] md:max-h-[60vh] object-contain p-4 shadow-lg transform transition-transform duration-500 hover:scale-105"
+        />
       </div>
 
       {/* Scroll Down Section */}
@@ -70,9 +74,17 @@ const Home = () => {
       {/* Filtered Events Section */}
       <div className="px-8">
         {filteredEvents.length > 0 ? (
-          <div>
+          <div className="flex flex-wrap justify-center gap-6">
             {filteredEvents.map((event) => (
-              <EventCard key={event.eventId} {...event} />
+              <EventCard 
+                key={event.eventId} 
+                title={event.title} 
+                date={event.date} 
+                time={event.time} 
+                venue={event.venue} 
+                description={event.description} 
+                tags={event.tags} 
+              />
             ))}
           </div>
         ) : (
