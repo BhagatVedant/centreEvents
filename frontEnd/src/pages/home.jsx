@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import EventCard from "../components/eventCard";
+import EventCard from "../components/EventCard";
 import logo from "../assets/logo.png";
+import cookingClassImage from "../assets/cookingClass.jpeg";
+import pirateClubImage from "../assets/pirateClub.jpeg";
 
 const Home = () => {
   const [events, setEvents] = useState([]);
@@ -29,6 +31,17 @@ const Home = () => {
     if (selectedCategory === "CONVOS" && event.type === "convocation") return true;
     return false;
   });
+
+  const getImage = (title) => {
+    switch (title) {
+      case "Pirates Club Meeting":
+        return pirateClubImage;
+      case "Cooking Class":
+        return cookingClassImage;
+      default:
+        return "";
+    }
+  };
 
   return (
     <div className="min-h-screen bg-oxford_blue">
@@ -74,7 +87,7 @@ const Home = () => {
       {/* Filtered Events Section */}
       <div className="px-8">
         {filteredEvents.length > 0 ? (
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="event-cards-container">
             {filteredEvents.map((event) => (
               <EventCard 
                 key={event.eventId} 
@@ -84,6 +97,7 @@ const Home = () => {
                 venue={event.venue} 
                 description={event.description} 
                 tags={event.tags} 
+                image={getImage(event.title)}
               />
             ))}
           </div>
