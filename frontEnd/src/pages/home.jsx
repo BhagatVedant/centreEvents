@@ -1,7 +1,29 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import EventCard from "../components/eventCard"; // Assuming EventCard component is in this folder
-import logo from "../assets/logo.png"; // Update with your logo path
+import EventCard from "../components/EventCard";
+import logo from "../assets/logo.png";
+import cookingClassImage from "../assets/cookingClass.jpeg";
+import pirateClubImage from "../assets/pirateClub.jpeg";
+import environmentalImage from "../assets/environmental.jpeg";
+import boardgameImage from "../assets/boardgame.jpeg";
+import filmImage from "../assets/film.jpeg";
+import meditationImage from "../assets/meditation.jpeg";
+import yogaImage from "../assets/yoga.jpeg";
+import codingImage from "../assets/coding.jpeg";
+import danceImage from "../assets/dance.jpeg";
+import robotImage from "../assets/robot.jpeg";
+import scienceImage from "../assets/science.jpeg";
+import languageImage from "../assets/language.jpeg";
+import gardeningImage from "../assets/gardening.jpeg";
+import dramaImage from "../assets/drama.jpeg";
+import musicImage from "../assets/music.jpeg";
+import fitnessImage from "../assets/fitness.jpeg";
+import photographyImage from "../assets/photography.jpeg";
+import techImage from "../assets/tech.jpeg";
+import artImage from "../assets/art.jpeg";
+import chessImage from "../assets/chess.jpeg";
+import bookImage from "../assets/book.jpeg";
+import astronomyImage from "../assets/astronomy.jpeg";
 
 const Home = () => {
   const [events, setEvents] = useState([]);
@@ -25,10 +47,61 @@ const Home = () => {
 
   const filteredEvents = events.filter((event) => {
     if (selectedCategory === "ALL") return true;
-    if (selectedCategory === "CLUB" && event.tags.includes("club")) return true;
-    if (selectedCategory === "CONVOS" && event.tags.includes("convo")) return true;
+    if (selectedCategory === "CLUB" && event.type === "club") return true;
+    if (selectedCategory === "CONVOS" && event.type === "convocation") return true;
     return false;
   });
+
+  const getImage = (title) => {
+    switch (title) {
+      case "Pirates Club Meeting":
+        return pirateClubImage;
+      case "Cooking Class":
+        return cookingClassImage;
+      case "Astronomy Night":
+        return astronomyImage;
+      case "Book Club Meeting":
+        return bookImage;
+      case "Chess Tournament":
+        return chessImage;
+      case "Art Exhibition":
+        return artImage;
+      case "Tech Talk":
+        return techImage;
+      case "Photography Walk":
+        return photographyImage;
+      case "Fitness Bootcamp":
+        return fitnessImage;
+      case "Music Jam Session":
+        return musicImage;
+      case "Drama Rehearsal":
+        return dramaImage;
+      case "Gardening Workshop":
+        return gardeningImage;
+      case "Language Exchange":
+        return languageImage;
+      case "Science Fair":
+        return scienceImage;
+      case "Robotics Workshop":
+        return robotImage;
+      case "Dance Practice":
+        return danceImage;
+      case "Coding Hackathon":
+        return codingImage;
+      case "Yoga Class":
+        return yogaImage;
+      case "Environmental Cleanup":
+        return environmentalImage;
+      case "Meditation Session":
+        return meditationImage;
+      case "Film Screening":
+        return filmImage;
+      case "Board Game Night":
+        return boardgameImage;
+      default:
+        return "";
+    }
+  };
 
   return (
     <div className="min-h-screen bg-oxford_blue">
@@ -74,7 +147,7 @@ const Home = () => {
       {/* Filtered Events Section */}
       <div className="px-8">
         {filteredEvents.length > 0 ? (
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="event-cards-container">
             {filteredEvents.map((event) => (
               <EventCard 
                 key={event.eventId} 
@@ -84,6 +157,7 @@ const Home = () => {
                 venue={event.venue} 
                 description={event.description} 
                 tags={event.tags} 
+                image={getImage(event.title)}
               />
             ))}
           </div>

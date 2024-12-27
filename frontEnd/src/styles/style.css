@@ -4,3 +4,56 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+.event-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards */
+  gap: 60px; /* Increase gap between cards */
+}
+
+.event-card {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 250px;
+  width: 600px; /* Ensure fixed width for consistency */
+  margin-bottom: 60px; /* Increase margin between cards */
+}
+
+.event-card-content {
+  flex: 1;
+  z-index: 1;
+  transition: opacity 1s ease; /* Slow down transition for opacity */
+}
+
+.event-card-image {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  transition: flex 1s ease, opacity 1s ease; /* Slow down transition for flex and opacity */
+}
+
+.event-card:hover .event-card-content {
+  opacity: 0;
+}
+
+.event-card:hover .event-card-image {
+  flex: 1 1 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.event-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-card:not(:hover) .event-card-image {
+  transition: flex 1s ease, opacity 1s ease; /* Slow down the transition back */
+}
