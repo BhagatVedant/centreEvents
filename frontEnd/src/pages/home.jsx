@@ -37,7 +37,7 @@ const Home = () => {
         setEvents(response.data);
       })
       .catch((error) => {
-        console.error("There was an error fetching the events!", error);
+        console.error("There was an error fetching the events!", error);z
       });
   }, []);
 
@@ -106,7 +106,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-oxford_blue">
       {/* Logo Section */}
-      <div className="flex justify-center items-center h-screen bg-saffron">
+      <div className="flex justify-center items-center bg-saffron">
         <img
           src={logo}
           alt="CentreEvents Logo"
